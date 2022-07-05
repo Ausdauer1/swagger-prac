@@ -1,8 +1,31 @@
 openapi: "3.0.0"
 info : 
-  title : 위드네트웍스 홈페이지 API
-  description : 위드네트웍스 관리자 및 홈페이지 api 입니다
+  title : Api 연습
+  description : 연습
   version : 1.0.0
 servers : 
   - url : localhost:5005
-    description : dev server
+components : 
+  schemas : 
+paths:
+  /complete/search:
+    get:
+      tags: [태그태그]
+      summary: 자동완성 검색 결과를 반환합니다.
+      parameters:
+        - name: q
+          in: query
+          required : true
+          schema:
+            type: string
+        - name: client
+          in: query
+          schema:
+            type: string
+      responses:
+        '200':
+          description: A Text File
+          content:
+            text/plain:
+              schema:
+                type: string
