@@ -1,0 +1,8 @@
+openapi: "3.0.0"
+info : 
+  title : 위드네트웍스 홈페이지 API
+  description : 위드네트웍스 관리자 및 홈페이지 api 입니다
+  version : 1.0.0
+servers : 
+  - url : localhost:5005
+    description : dev server
