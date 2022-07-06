@@ -4,6 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "api-docs" : "swagger-cli bundle ./swagger/apis.yaml --outfile ./swagger/output.yaml --type yaml",
+    "preserver" : "npm run api-docs",
     "test": "echo \"Error: no test specified\" && exit 1",
     "server": "nodemon ./index.js"
   },

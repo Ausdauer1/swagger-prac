@@ -1,0 +1,73 @@
+openapi: 3.0.0
+info:
+  title: Api 연습
+  description: 연습
+  version: 1.0.0
+servers:
+  - url: 'localhost:5005'
+paths:
+  /complete/search:
+    get:
+      tags:
+        - 태그태그
+      summary: 자동완성 검색 결과를 반환합니다.
+      parameters:
+        - name: q
+          in: query
+          required: true
+          schema:
+            type: string
+        - name: client
+          in: query
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: string
+              example:
+                result:
+                  file: 파일string
+  /complete/search2:
+    get:
+      tags:
+        - 태그태그
+      summary: 자동완성 검색 결과를 반환합니다.
+      parameters:
+        - name: q
+          in: query
+          required: true
+          schema:
+            type: string
+        - name: client
+          in: query
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: string
+              example:
+                result:
+                  file: 파일string
+securityDefinitions:
+  apiKeyAuth:
+    type: 'apiKey,'
+    in: 'header,'
+    name: 'authorizations,'
+    description: 토큰 값을 넣어주세요!
+components:
+  parameters:
+    file:
+      name: 'file,'
+      in: 'formData,'
+      required: 'false,'
+      description: '첨부파일,'
+      schema:
+        type: file

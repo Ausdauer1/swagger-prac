@@ -1,0 +1,5 @@
+/complete/search:
+  $ref: "./search.yaml#/test" 
+/complete/search2:
+  $ref: "./search.yaml#/test2"
+

@@ -1,0 +1,48 @@
+test:
+  get:
+    tags: [태그태그]
+    summary: 자동완성 검색 결과를 반환합니다.
+    parameters:
+      - name: q
+        in: query
+        required : true
+        schema:
+          type: string
+      - name: client
+        in: query
+        schema:
+          type: string
+    responses:
+      '200':
+        description: OK
+        content:
+          application/json:
+            schema:
+              type: string
+            example: 
+              result: 
+                file: 파일string
+test2:
+  get:
+    tags: [태그태그]
+    summary: 자동완성 검색 결과를 반환합니다.
+    parameters:
+      - name: q
+        in: query
+        required : true
+        schema:
+          type: string
+      - name: client
+        in: query
+        schema:
+          type: string
+    responses:
+      '200':
+        description: OK
+        content:
+          application/json:
+            schema:
+              type: string
+            example: 
+              result: 
+                file: 파일string          

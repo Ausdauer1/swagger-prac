@@ -1,9 +1,10 @@
 const express = require('express');
 const app = express();
+const path = require('path');
 
 const swaggerUi = require('swagger-ui-express')
 const YAML = require('yamljs')
-const swaggerDocument = YAML.load('./swagger.yaml')
+const swaggerDocument = YAML.load(path.join(__dirname,'./swagger/output.yaml'))
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
